@@ -66,39 +66,7 @@ GEMINI_API_KEY=
 
 Điền token tương ứng nếu muốn khởi bot đó. Nếu để trống thì bot sẽ không khởi.
 
-4. Chạy ứng dụng (server + bot manager):
 
-```bash
-python main.py
-```
-
-Sau khi chạy, Dashboard sẽ khởi trên:
-
-- HTTPS: `https://localhost:8443` (nếu `cert.pem` và `key.pem` có sẵn)
-- HTTP: `http://localhost:8449` (nếu không có `*.pem`)
-
-## Các chức năng chi tiết
-
-- Dashboard:
-  - Quản lý tài khoản đăng nhập (`config/.users`).
-  - Chỉnh sửa và lưu `config/config.json` (JSON).
-  - Thêm / sửa / xóa biến môi trường trong file `.env` (lưu bằng `KEY=VALUE`).
-  - Tạo file `.env` mặc định lần đầu chạy nếu chưa tồn tại.
-
-- Bot manager:
-  - Quét thư mục `env/` để tìm các file `.env` và khởi tiến trình bot tương ứng.
-  - Tránh khởi bot nếu token thiếu hoặc xác thực thất bại.
-  - Tự động khởi lại bot khi file `.env` thay đổi.
-
-## Ghi chú & Troubleshooting
-
-- Nếu gặp lỗi liên quan `Event loop is closed`, cập nhật code để dùng kiểm tra token đồng bộ trước khi chạy `app.run_polling()` (đã áp dụng trong `telebot.py`).
-- Kiểm tra kỹ đường dẫn `env/` và tên file `.env` — chương trình chỉ đọc các file bắt đầu bằng `.env` theo mặc định.
-- Kiểm tra file `config/config.json` nếu bot AI cần cấu hình thêm (model, temperature,...).
-
-## Muốn tôi làm gì tiếp theo?
-
-- Tôi có thể: thêm ví dụ `env/.env.example`, thêm script khởi nhanh `run.sh`/`run.bat`, hoặc cập nhật README theo yêu cầu.
 
 ---
 
