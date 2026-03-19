@@ -28,43 +28,7 @@
 - Username: `admin`
 - Password: `admin123`
 
-## Yêu cầu
 
-- Python 3.10+ (hoặc phiên bản tương thích với các thư viện trong `requirements.txt`)
-- Các gói trong `requirements.txt` (cài qua `pip`)
-
-## Cách tải từ GitHub và chạy
-
-1. Clone repo:
-
-```bash
-git clone <repository-url>
-cd <repo-folder>
-```
-
-2. Tạo virtual environment và cài dependencies:
-
-```bash
-python -m venv .venv
-source .venv/bin/activate    # Linux/macOS
-.
-.venv\Scripts\Activate.ps1  # Windows PowerShell
-pip install -r requirements.txt
-```
-
-3. Cấu hình token
-
-- Tạo/ sửa file `env/.env` hoặc các file bắt đầu bằng `.env` trong thư mục `env/`.
-- Ví dụ nội dung tối thiểu của `env/.env`:
-
-```
-ZALO_BOT_TOKEN=
-TELE_TOKEN=
-FB_TOKEN=
-GEMINI_API_KEY=
-```
-
-Điền token tương ứng nếu muốn khởi bot đó. Nếu để trống thì bot sẽ không khởi.
 
 
 
